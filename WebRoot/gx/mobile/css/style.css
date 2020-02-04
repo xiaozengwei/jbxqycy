@@ -1,0 +1,74 @@
+body, html {
+  /*height: 100%;*/
+  -webkit-tap-highlight-color: transparent;
+}
+.demos-title {
+  text-align: center;
+  font-size: 34px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%;
+}
+
+.demos-sub-title {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.demos-header {
+  padding: 35px 0;
+}
+
+.demos-content-padded {
+  padding: 15px;
+}
+
+.demos-second-title {
+  text-align: center;
+  font-size: 24px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+}
+
+footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+.paddingLeft10{
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.textOverflow{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.div-title{
+  text-align: center;
+  height: 50px;
+  background-color: dodgerblue;
+  width: 100%;
+}
+.a-title{
+  position: absolute;
+  z-index: 100;
+  float: left;
+  top:3px;
+  left:3px;
+}
+.span-title{
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}

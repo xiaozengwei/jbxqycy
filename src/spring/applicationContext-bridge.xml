@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- ================================================== -->
+
+	<bean id="userRepoCache" class="com.gx.bridge.userrepo.UserRepoCacheImpl">
+		<property name="cacheStrategy" ref="localCacheStrategy"/>
+	</bean>
+
+	<bean id="userRepoConnector" class="com.gx.bridge.userrepo.UserRepoConnectorFactoryBean">
+		<property name="type" value="${bridge.userrepo.type}"/>
+		<property name="userRepoCache" ref="userRepoCache"/>
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+
+	<bean class="com.gx.bridge.userrepo.UserRepoPopulator">
+		<property name="debug" value="${bridge.userrepo.debug}"/>
+	</bean>
+
+	<bean class="com.gx.bridge.userrepo.UserRepoSubscriber"/>
+
+	<!-- ================================================== -->
+
+	<bean id="scopeCache" class="com.gx.bridge.scope.ScopeCacheImpl">
+		<property name="cacheStrategy" ref="localCacheStrategy"/>
+	</bean>
+
+	<bean id="scopeConnector" class="com.gx.bridge.scope.ScopeConnectorFactoryBean">
+		<property name="type" value="${bridge.scope.type}"/>
+		<property name="scopeCache" ref="scopeCache"/>
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+
+	<bean class="com.gx.bridge.scope.ScopePopulator">
+		<property name="debug" value="${bridge.scope.debug}"/>
+	</bean>
+
+	<bean class="com.gx.bridge.scope.ScopeSubscriber"/>
+
+	<!-- ================================================== -->
+
+	<bean id="userCache" class="com.gx.bridge.user.UserCacheImpl">
+		<property name="cacheStrategy" ref="remoteCacheStrategy"/>
+	</bean>
+
+	<bean id="userConnector" class="com.gx.bridge.user.UserConnectorFactoryBean">
+		<property name="type" value="${bridge.user.type}"/>
+		<property name="userCache" ref="userCache"/>
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+
+	<bean class="com.gx.bridge.user.UserUpdatedSubscriber"/>
+
+	<bean class="com.gx.bridge.user.UserRemovedSubscriber"/>
+
+	<!-- ================================================== -->
+
+	<bean id="userAuthCache" class="com.gx.bridge.userauth.UserAuthCacheImpl">
+		<property name="cacheStrategy" ref="remoteCacheStrategy"/>
+	</bean>
+
+	<bean id="userAuthConnector" class="com.gx.bridge.userauth.UserAuthConnectorFactoryBean">
+		<property name="type" value="${bridge.userauth.type}"/>
+		<property name="userAuthCache" ref="userAuthCache"/>
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+		<property name="userConnector" ref="userConnector"/>
+		<property name="scopeConnector" ref="scopeConnector"/>
+	</bean>
+
+	<!-- ================================================== -->
+
+	<bean id="formConnector" class="com.gx.bridge.form.DatabaseFormConnector">
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+
+
+
+
+	<bean id="templateConnector" class="com.gx.bridge.internal.TemplateConnectorImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+
+
+
+
+</beans>

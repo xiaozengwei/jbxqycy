@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0; font-family:"微软雅黑";}
+a{ color:#333;}
+a:visited{ color:#333;}
+a:hover{ color:#4178be;}
+
+body{ background-color:#f2f2f2;}
+
+/*top*/
+.top{ width:100%; height:auto; position:relative; background-color:#4178be;}
+.top_main{ width:1200px; height:80px; margin:0 auto; position:relative; z-index:2;}
+.top_logo{ width:260px; height:50px; position:absolute; top:15px; left:0px;}
+.top_tit{ width:170px; height:50px; position:absolute; top:15px; left:295px; font-size:23px; line-height:50px; color:#fff;}
+.top_nav{ width:auto; height:35px; position:absolute; top:23px; right:240px;}
+.top_nav a.return{ display:block; width:120px; height:33px; background:url(../images/return_bg1.png) top no-repeat; font-size:15px; line-height:33px; text-align:center; color:#b9daff; cursor:pointer;}
+.top_nav a.return:hover{ background:url(../images/return_bg2.png) top no-repeat; color:#fff;}
+.top_search{ width:210px; height:35px; position:absolute; top:23px; right:0px;}
+.top_search form{ width:210px; height:35px; background-color:#86a9d5; border:1px solid #0454b0; position:relative;}
+.top_search .text{ display:block; width:170px; height:33px; padding-left:10px; position:absolute; top:0px; left:1px; background:none; border:none; outline:none; font-size:13px; line-height:33px; color:#fff;}
+.top_search .submit{ display:block; width:33px; height:33px; position:absolute; top:0px; right:1px; background:url(../images/search_bg1.png) 7px 6px no-repeat; border:none;}
+
+
+/*主体*/
+.yhzc_all{ width:1000px; height:auto; min-height:450px; margin:20px auto; padding:20px; overflow:hidden; position:relative; background-color:#fff;}
+
+.yhzc_tit_main{ height:50px; padding:0px 20px; overflow:hidden; background-color:#f7f7f7;}
+.yhzc_tit_main .c1{ float:left; font-size:19px; font-weight:bold; line-height:50px; color:#4178be;}
+.yhzc_tit_main .c2{ float:right; font-size:15px; line-height:50px;}
+
+.yhzc_list_main{ height:auto; min-height:450px; padding-top:30px; overflow:hidden;}
+.list_cell{ width:960px; margin-bottom:10px; overflow:hidden;}
+.cell_r1{ height:40px; overflow:hidden; position:relative;}
+.cell_r1 .c1{ float:left; width:320px; height:40px; padding-right:10px; font-size:17px; line-height:40px; text-align:right;}
+.cell_r1 .c2{ float:left; width:450px; height:40px; position:relative;}
+.cell_r1_input{ display:block; width:450px; height:40px; padding-left:10px; padding-right:10px; background:none; border:1px solid #e0e0e0; font-size:15px; line-height:38px;}
+
+.cell_r2{ height:40px; overflow:hidden; position:relative;}
+.cell_r2 .c1{ float:left; width:320px; height:40px; padding-right:10px;}
+.cell_r2 .c2{ float:left; width:450px; height:40px; font-size:15px; line-height:40px; color:#999; text-align:left;}
+.check_code_input{ display:block; float:left; width:225px; height:40px; margin-right:20px; padding-left:10px; padding-right:10px; background:none; border:1px solid #e0e0e0;}
+.check_code_img{ display:block; float:left; width:145px; height:39px; border:none; cursor:pointer;}
+.cell_r3{ height:35px; margin-bottom:10px; overflow:hidden; position:relative;}
+.cell_r3 .c1{ float:left; width:320px; height:35px; padding-right:10px;}
+.cell_r3 .c2{ float:left; width:450px; height:35px; background-color:#f2f2f2;}
+.code_deg{ float:left; width:150px; height:35px; border-right:1px solid #d9d9d9; font-size:15px; line-height:35px; color:#999; text-align:center;}
+
+.list_cell_last{ width:960px; overflow:hidden;}
+.cell_last_r1{ height:50px; overflow:hidden; position:relative;}
+.cell_last_r1 .c1{ float:left; width:320px; height:40px; padding-right:10px;}
+.cell_last_r1 .c2{ float:left; width:450px; height:40px; padding-right:10px; position:relative;}
+
+.form_reg{ display:block; width:180px; height:50px; position:absolute; top:0px; left:0px; background-color:#37bd9c; border:none; font-size:17px; line-height:50px; color:#fff; text-align:center; cursor:pointer; transition:all ease-in-out 0.2s;}
+.form_reg:hover{ background-color:#33ad8f;}
+.form_reset{ display:block; width:180px; height:50px; position:absolute; top:0px; left:200px; background-color:#3499da; border:none; font-size:17px; line-height:50px; color:#fff; text-align:center; cursor:pointer; transition:all ease-in-out 0.2s;}
+.form_reset:hover{ background-color:#3289c1;}
+
+/*foot*/
+.foot{ width:100%; height:auto; background-color:#d9d9d9;}
+
+
+
+
+
+
+
